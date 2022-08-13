@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/book/book",
+    "pages/my/my",
+    "pages/register/register",
+    "pages/self/self",
+    "pages/loan/loan",
+    "pages/return/return",
+    "pages/history/history",
+    "pages/bookInfo/bookInfo"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "***图书管理系统",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
+    "selectedColor": "#CCFF66",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "images/zhuye.png",
+      "selectedIconPath": "images/zhuye_active.png"
+    },{
+      "pagePath": "pages/book/book",
+      "text": "图书",
+      "iconPath": "images/tushu.png",
+      "selectedIconPath": "images/tushu_active.png"
+    },{
+      "pagePath": "pages/loan/loan",
+      "text": "借阅",
+      "iconPath": "images/loan.png",
+      "selectedIconPath": "images/loan_active.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "images/wode.png",
+      "selectedIconPath": "images/wode_active.png"
+    }
+    ]
+  },
+  "usingComponents": {
+    "mp-loading": "weui-miniprogram/loading/loading"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

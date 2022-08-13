@@ -1,0 +1,19 @@
+<view class="page">
+<view class="page__hd">
+  <mp-searchbar search="{{search}}" throttle="1000">
+  </mp-searchbar>
+</view>
+<scroll-view class="page__bd" scroll-y="true" enable-back-to-top="true" bindscrolltolower="lower" style="height: 100%;">
+  <view class="weui-cells weui-cells-cells_after-title">
+
+    <navigator wx:for="{{listData}}" wx:for-item="item"  class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../bookInfo/bookInfo?bookId={{item.id}}" wx:key="id">
+      <view class="weui-cell__hd">
+        <image src="{{item.avatar}}" mode="aspectFit"></image>
+      </view>
+      <view class="weui-cell__bd">{{item.bookName}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">在馆:{{item.copyIn}} {{item.author}}</view>
+    </navigator>
+
+  </view>
+</scroll-view>
+</view>

@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="page">
+    <form bindsubmit="formSubmit" >
+      <view class="input-list">
+        <view class="input-item">
+          <text class="input-item-label">账号</text>
+          <view class="input-item-content">
+            <input type="text" name="username" auto-focus placeholder="请输入用户名" maxlength='12'></input>
+          </view>
+        </view>
+
+        <view class="input-item">
+          <text class="input-item-label">密码</text>
+          <view class="input-item-content">
+            <input type="password" name="password"  placeholder="请输入登录密码" ></input>
+          </view>
+        </view>
+        <view class="input-item">
+          <text class="input-item-label">验证码</text>
+          <view class="input-item-content">
+            <input class="in-code" type="text" name="code" maxlength="5" value="{{code}}" placeholder="请输入验证码"></input>
+            <image  mode="scaleToFill" src="{{captchaImg}}" class="captchaImg" bindtap="getCaptcha"></image>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <view class="weui-btn_primary">
+          <button type="primary" form-type="submit">登录</button>
+        </view>
+        <view class="weui-btn_default">
+          <button type="default" form-type="reset">重置</button>
+        </view>
+        <view>
+          <navigator url="/pages/register/register">还没有账号？去注册~</navigator>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

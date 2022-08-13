@@ -1,0 +1,10 @@
+/* pages/my/my.wxss */
+swiper{
+    height: 400rpx;
+    text-align: center;
+    margin: 5rpx 10rpx;
+}
+text{
+    font-size: x-large;
+    font-weight: bold;
+}

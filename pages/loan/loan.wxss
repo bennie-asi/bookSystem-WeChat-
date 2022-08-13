@@ -1,0 +1,24 @@
+/* pages/loan/loan.wxss */
+page{
+
+    height:100%
+ 
+ }
+ 
+ .imagesize{
+ 
+  display:flex;               
+ 
+  justify-content: center;      
+ 
+  align-items:center;           
+ 
+ }
+ 
+ .imagesize image {
+ 
+   width:200rpx;
+ 
+   height:200rpx;
+ 
+ }

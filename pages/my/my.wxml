@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="weui-cells weui-cells_after-title">
+    <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url='../self/self'>
+      <view class="weui-cell__hd">
+        <image src="../../images/self.png" mode="aspectFit"></image>
+      </view>
+      <view class="weui-cell__bd">个人中心</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+    <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url='../return/return'>
+      <view class="weui-cell__hd">
+        <image src="../../images/return.png" mode="aspectFit"></image>
+      </view>
+      <view class="weui-cell__bd">待还</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url='../history/history'>
+        <view class="weui-cell__hd">
+        <image src="../../images/history.png" mode="aspectFit"></image>
+        </view>
+        <view class="weui-cell__bd">借阅历史</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="exit">
+        <view class="weui-cell__hd">
+        <image src="../../images/exit.png" mode="aspectFit"></image>
+        </view>
+        <view class="weui-cell__bd">退出</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view>
+</view>

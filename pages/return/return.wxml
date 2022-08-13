@@ -1,0 +1,27 @@
+<view class="page">
+  <view class="page__hd">
+    目前{{userInfo.username}}用户借阅的书籍
+  </view>
+  <scroll-view class="page__bd" scroll-y="true" enable-back-to-top="true" bindscrolltolower="lower" style="height: 100%;">
+    <view class="weui-cells weui-cells-cells_after-title">
+      <view wx:for="{{listData}}" wx:for-item="item" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:key="item">
+        <view class="weui-cell__hd">
+          <!-- <image src="../../images/self.png" mode="aspectFit"></image> -->
+          <view class="btn" data-id="{{item.id}}" hover-class="weui-cell_active" bindtap="renew">续借</view>
+          <view class="btn" data-id="{{item.id}}" hover-class="weui-cell_active" bindtap="returnBook">归还</view>
+        </view>
+        <view class="weui-cell__bd">{{item.bookName}}
+          <view>编号：{{item.copyNum}}</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">
+          <view>借阅：{{item.loanTime}}</view>
+          <view>应还：{{item.preReturnTime}}</view> 作者：{{item.author}}
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" title="请输入识别码" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <input type='text' bindtap="a" maxlength="5" model:value="{{code}}" placeholder="识别码请联系管理员" auto-focus />
+</modal>

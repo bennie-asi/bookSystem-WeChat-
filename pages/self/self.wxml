@@ -1,0 +1,31 @@
+<view class="we_form_wrap">
+    <!--
+   models:需要校验的表单数据
+   rules：表单校验的规则列表
+   prop="userName" 和 data-field="userName"的值要一样，不然验证不了
+  -->
+  <!--顶部错误提示-->
+  <mp-toptips msg="{{errorMsg}}" type="error" show="{{errorMsg}}" delay="1500"></mp-toptips>
+  <view>
+    <text>欢迎你呀！{{userInfo.username}}同学</text>
+  </view>
+  <mp-form id="form" rules="{{rules}}" models="{{form}}">
+    <mp-cells>
+      <mp-cell class="form_item" prop="currentPass" title="旧密码">
+        <input bindinput="formInputChange" value="{{form.currentPass}}" type="password" data-field="currentPass" class="weui-input" placeholder="请输入旧密码"/>
+      </mp-cell>
+      <mp-cell class="form_item" prop="password" title="新密码">
+        <input bindinput="formInputChange" value="{{form.password}}" type="password" data-field="password" class="weui-input" placeholder="请输入新密码"/>
+      </mp-cell>
+      <mp-cell class="form_item" prop="checkPass" title="确认密码">
+        <input bindinput="formInputChange" value="{{form.checkPass}}" type="password" data-field="checkPass" class="weui-input" placeholder="请再次输入新密码"/>
+      </mp-cell>
+    </mp-cells>
+    <!--提交按钮-->
+    <view class="submit_btn_wrap">
+      <button class="weui-btn" type="primary" bindtap="weSubmitForm">确定</button>
+      <button type="warn" bindtap="restForm" plain>重置</button>
+    </view>
+  </mp-form>
+
+</view>

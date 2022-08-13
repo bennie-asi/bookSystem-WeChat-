@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">书籍详情</view>
+    <view class="page__desc">Tips:如遇到不可借的情况，请联系图书管理员</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">书名：{{bookInfo.bookName}}</view>
+      <view class="weui-cell"></view>
+      <view class="weui-article__section">
+        <image src="{{bookInfo.avatar}}" mode="aspectFit"></image>
+        <view class="weui-article__h2">作者：——{{bookInfo.author}}——</view>
+        <view class="weui-article__title">ISBN: {{bookInfo.isbn}}</view>
+        <view class="weui-article__section">
+          <view class="weui-article__h3">出版社：{{bookInfo.press}}</view>
+          <view class="weui-article__title">出版时间：{{bookInfo.pressTime}}</view>
+          <view class="weui-article__title">拥有副本数：{{bookInfo.copySum}}</view>
+          <view class="weui-article__title">在馆数：{{bookInfo.copyIn}}</view>
+          <view class="weui-article__p"></view>
+          <view class="weui-cell"></view>
+          <view class="weui-article__p" wx:for="{{copyList}}" wx:for-item="item" wx:key="item">
+            <view>
+              编号：{{item.copyNum}} </view>
+            <view>
+              副本信息:
+              <block wx:if="{{item.statu==0}}" style="display: inline;">
+                <view class="weui-badge">在馆</view>
+                <button bindtap="tocopyNum" data-copyNum="{{item.copyNum}}">去借阅</button>
+              </block>
+
+              <block wx:else style="display: inline;">
+                <view class="weui-badge">借出</view>
+              </block>
+
+            </view>
+          </view>
+          <view class="weui-article__p"></view>
+          <view class="weui-cell"></view>
+          <view class="weui-article__p">
+          文章描述：
+            <rich-text space="nbsp" nodes="{{bookInfo.remark}}">
+            </rich-text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,27 @@
+<view class="page">
+  <mp-form-page>
+    <mp-form id="form" >
+      <mp-cells title="借阅书籍">
+        <view class="imagesize">
+        <image src="{{userInfo.avatar}}" mode="aspectFit"></image>
+        </view>
+        
+        <mp-cell prop="username" title="用户名:"  ext-class="">
+          <input name="username" value="{{userInfo.username}}" disabled="true" bindinput="a" class="weui-input" placeholder="" />
+        </mp-cell>
+        <mp-cell prop="code"  title="识别码:" ext-class="">
+          <input name="code" maxlength="5" model:value="{{code}}" class="weui-input" bindinput="a" placeholder="请联系管理员获取" />
+        </mp-cell>
+        <mp-cell prop="copyNum" title="副本编号:"  ext-class="">
+          <input name="copyNum" class="weui-input" placeholder="" bindinput="a" model:value="{{copyNum}}" />
+        </mp-cell>
+        <mp-cell></mp-cell>
+      </mp-cells>
+       
+        <view slot="button">
+          <button class="weui-btn" form-type="submit" type="primary" bindtap="submitForm">提交借阅</button>
+        </view>
+
+    </mp-form>
+  </mp-form-page>
+</view>

@@ -1,0 +1,21 @@
+<view>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true">
+        <swiper-item wx:for="{{tableData}}" wx:for-item="item" wx:key="id" wx:if="{{item.statu > 0}}">
+            <text>{{item.title}}</text>
+            <rich-text nodes="{{item.content}}"></rich-text>
+        </swiper-item>
+    </swiper>
+    <text>今日新书速递！</text>
+    <view class="weui-cells weui-cells-cells_after-title">
+        <navigator wx:for="{{listData}}" wx:for-item="item" class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../bookInfo/bookInfo?bookId={{item.id}}" wx:key="id">
+            <view class="weui-cell__hd">
+                <image src="{{item.avatar}}" mode="aspectFit"></image>
+                <view class="weui-article__h2">书籍：{{item.bookName}}</view>
+                <view class="weui-cell__hd" style="white-space:pre-wrap;">作者：{{item.author}}            在馆数:{{item.copyIn}} </view>
+            </view>
+        </navigator>
+
+    </view>
+
+
+</view>
